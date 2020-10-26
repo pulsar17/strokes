@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Mukta', sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.8fr;
+    grid-template-rows: 1fr 4fr 2fr 1fr;
+    grid-template-areas: 
+    "main       main        header"
+    "main       main        image"
+    "date       impressions image"
+    "next-event next-event  image"    
+    ;
+    height: 100vh;
+    /* margin: 2em; */
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    grid-area: main;
+    background: #FFFADF;
+    padding: 1em 2em;
+    transition: 0.3s;
+}
+main:hover{
+    z-index: 1;
+    box-shadow:0.5rem  1rem 2rem rgba(0,0,0,0.5);
+}
+
+div .heading {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+div .main-text{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+
+}
+
+
+.strokes-logo{
+    background: url(./strokes_logo.png) no-repeat ;
+    background-size: contain;
+    height: 5rem;
+    width: 5rem;
+    margin: 1rem 0;
+}
+section.date{
+    grid-area: date;
+    background: #C4B35A;
+}
+
+
+section.impressions{
+    grid-area: impressions;
+    background: #333333;
+}
+
+section.next-event{
+    grid-area: next-event;
+    background: #202020;
+}
+
+.next-event:hover{
+    z-index: 1;
+    box-shadow:0.5rem  1rem 2rem rgba(0,0,0,0.8);
+}
+
+.image{
+    grid-area: image;
+    background: #F26574;
+    background-size: cover;
+    min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+}
