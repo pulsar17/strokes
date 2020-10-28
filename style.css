@@ -66,23 +66,67 @@ header{
 section.date{
     grid-area: date;
     background: #C4B35A;
+    display: flex;
+    flex-direction: column;
+    /* padding: 1rem; */
+    font-family: 'Mukta', sans-serif;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.date:hover{
+    z-index: 1;
+    box-shadow:0.5rem 1rem 2rem rgba(0,0,0,0.8);
+}
+
+.content{
+    font-size: 4rem;
+}
+
+.content strong{
+    font-weight: 800;
+    font-size: 6rem;
+}
+
+.date .content{
+    color: #252424;
 }
 
 
 section.impressions{
     grid-area: impressions;
     background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.impressions .content{
+    color: #d3d2cc;
+}
+
+.impressions:hover{
+    z-index: 1;
+    box-shadow:0.5rem 1rem 2rem rgba(0,0,0,0.8);
 }
 
 section.next-event{
     grid-area: next-event;
     background: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .next-event:hover{
     z-index: 1;
     box-shadow:0.5rem  1rem 2rem rgba(0,0,0,0.8);
 }
+
+
 
 .image{
     grid-area: image;
