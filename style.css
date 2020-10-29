@@ -22,6 +22,8 @@ body{
     "next-event next-event  image"    
     ;
     height: 100vh;
+    font-weight: inherit;
+    font-size: 1vw;
     /* margin: 2em; */
 }
 
@@ -30,39 +32,38 @@ main{
     flex-direction: column;
     grid-area: main;
     background: #FFFADF;
-    padding: 1rem 2rem;
+    padding: 1em 2em;
     transition: 0.3s;
 }
 main:hover{
     z-index: 1;
-    box-shadow:0.5rem  1rem 2rem rgba(0,0,0,0.5);
+    box-shadow:0.5em  1em 2em rgba(0,0,0,0.5);
     /* padding: 1rem; */
 }
 
 div .heading {
-    font-size: 5rem;
+    font-size: 5em;
     font-weight: 550;
 }
 
 div .main-text{
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 500;
 }
 
 header{
     display: flex;
     align-items: center;
-    padding: 0 1rem;
-
+    padding: 0 1em;
 }
 
 
 .strokes-logo{
     background: url(./images/strokes_logo.png) no-repeat ;
     background-size: contain;
-    height: 5rem;
-    width: 5rem;
-    margin: 1rem 0;
+    height: 5em;
+    width: 5em;
+    margin: 1em 0;
 }
 section.date{
     grid-area: date;
@@ -78,16 +79,16 @@ section.date{
 
 .date:hover{
     z-index: 1;
-    box-shadow:0.5rem 1rem 2rem rgba(0,0,0,0.8);
+    box-shadow:0.5em 1em 2em rgba(0,0,0,0.8);
 }
 
 .content{
-    font-size: 4rem;
+    font-size: 3em;
 }
 
 .content strong{
-    font-weight: 800;
-    font-size: 6rem;
+    font-weight: 5em;
+    font-size: 2em;
 }
 
 .date .content{
@@ -110,7 +111,7 @@ section.impressions{
 
 .impressions:hover{
     z-index: 1;
-    box-shadow:0.5rem 1rem 2rem rgba(0,0,0,0.8);
+    box-shadow:0.5em 1em 2em rgba(0,0,0,0.8);
 }
 
 section.next-event{
@@ -124,7 +125,7 @@ section.next-event{
 
 .next-event:hover{
     z-index: 1;
-    box-shadow:0.5rem  1rem 2rem rgba(0,0,0,0.8);
+    box-shadow:0.5em  1em 2em rgba(0,0,0,0.8);
     cursor: pointer;
 }
 
@@ -142,6 +143,9 @@ section.next-event{
     min-height: 100%;
     width: auto;
     height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .image-gallery{
@@ -153,28 +157,27 @@ section.next-event{
 }
 
 .image-in-div{
-    height: 15rem;
-    width: 15rem;
+    height: 15em;
+    width: 15em;
+    border-radius: 1em;
+    transition: 0.3s;
 }
 
 .image-in-div:hover{
     z-index: 1;
-    box-shadow:0.5rem  1rem 2rem rgba(0,0,0,0.5);
+    box-shadow:0.5em  1em 2em rgba(0,0,0,0.5);
 }
 
 .artheals{
     align-self: flex-start;
     background: url(./images/artheals.png) no-repeat;
-    border-radius: 1rem;
     background-size: contain;
-    transition: 0.3s;
+
 }
 
 .artnaama{
     background: url(./images/try37.png) no-repeat;
-    border-radius: 1rem;
     background-size: contain;
-    transition: 0.3s;
     margin: auto;
 
 }
@@ -182,8 +185,6 @@ section.next-event{
 
 .kalagraphy{
     background: url(./images/kalagraphy.png) no-repeat;
-    border-radius: 1rem;
     background-size: contain;
-    align-self: flex-end;
     transition: 0.3s;
 }
