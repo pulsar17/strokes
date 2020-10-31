@@ -15,7 +15,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1.8fr;
-  grid-template-rows: 1fr 6fr 1fr 1fr;
+  grid-template-rows: 0.8fr 6fr 1fr 1fr;
   grid-template-areas:
     "main       main        header"
     "main       main        image"
@@ -71,34 +71,42 @@ main:hover {
   width: 3em;
   margin: 1em 0;
 }
-header {
-  display: flex;
-  align-items: center;
-  padding: 0.5em 1em;
-}
 
-.strokes-logo {
+
+/* .strokes-logo {
   background: url(./images/strokes_logo.png) no-repeat;
   background-size: contain;
   height: 3.5em;
   width: 3.5em;
-  /* margin: 1em 0; */
-}
+  margin: 1em 0;
+} */
 
 .navbar {
-  margin-left: auto;
+  /* margin-left: auto; */
+  height: 100%;
   width: 40%;
 }
 
 .navbar ul {
+  height: 100%;
   display: flex;
+  align-items: center;
   list-style: none;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .navbar ul li {
-  margin-left: auto;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-left: 2em;
+
+}
+
+.navbar ul li a{
+  color: #202020;
+  text-decoration: none;
 }
 
 .navbar #start-of-nav {
