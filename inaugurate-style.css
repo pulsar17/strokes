@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Mukta", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.grid-container{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-areas: 
+  "empty-left empty-middle-top empty-right"
+  "empty-left form empty-right"
+  "empty empty empty";
+}
+
+.input-form{
+  grid-area: form;
+  /* background: #fffadf; */
+  background: #fffadf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-logo {
+  background: url(./images/strokes_logo.png) no-repeat;
+  background-size: contain;
+  height: 5em;
+  width: 5em;
+  margin: 2em;
+  z-index: 1;
+}
+
+
+.main-form{
+  border-radius: 1em;
+  background: white;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em;
+  height: 50%;
+  width: 80%;
+  transition: 0.3s;
+}
+
+.main-form:hover{
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.5);
+}
+
+
+.input-form .input-code{
+  width: 80%;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1.2em;
+  font-weight: bolder;
+  padding: 10px;
+  /* text-align: center; */
+}
+
+.input-form .submit-button{
+  margin: 1em auto;
+  padding: 10px;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1em;  
+}
+
+.empty-left{
+  grid-area: empty-left;
+  background: #fffadf;
+}
+
+.empty-right{
+  grid-area: empty-right;
+  background: #fffadf;
+}
+
+.empty-middle{
+  grid-area: empty;
+  background:  #fffadf;
+}
+
+.middle-top{
+  grid-area: empty-middle-top;
+  background: #fffadf;
+}
