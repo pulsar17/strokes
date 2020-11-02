@@ -11,6 +11,7 @@ function onClick() {
     if (code == 88588) {
         timerValue = document.getElementById("timer-value");
         timerValue.style.visibility = "visible";
+        timerValue.style.display = "block";
         document.getElementById("submit-button").disabled = true;
         
         setInterval(function () {
@@ -28,4 +29,14 @@ function onClick() {
         alert("Enter a valid OTP");
     }
     
+}
+
+function moveUp() {
+    field = document.getElementById("input-code")
+    field.onFocus = function () {
+        form = document.getElementsByClassName("input-form");
+        form.style.position = "fixed";
+        form.style.top = "50px"
+    };
+
 }

@@ -22,6 +22,7 @@ body {
   "empty-left empty-middle-top timer"
   "empty-left form timer"
   "empty empty empty";
+  font-size: 1vw;
 }
 
 .input-form{
@@ -92,11 +93,9 @@ body {
 }
 
 #timer-value{
-  visibility: hidden;
+  display: none;
   font-size: 10em;
 }
-
-
 
 .empty-middle{
   grid-area: empty;
@@ -106,4 +105,33 @@ body {
 .middle-top{
   grid-area: empty-middle-top;
   background: #fffadf;
+}
+
+@media only screen and (max-width: 768px){
+
+  .grid-container{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10px auto 10px;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-areas: 
+  "empty-left timer empty-right"
+  "empty-left form empty-right"
+  "empty empty empty";
+  font-size: 3vw;
+  background: #fffadf;
+}
+  .middle-top{
+    display: none;
+  }
+  .empty-middle-top{
+    display: none;
+  }
+  
+  .main-form{
+    width: 80%;
+  }
+  .empty-right{
+    grid-area: empty-right;
+  }
 }

@@ -72,7 +72,6 @@ main:hover {
   margin: 1em 0;
 }
 
-
 /* .strokes-logo {
   background: url(./images/strokes_logo.png) no-repeat;
   background-size: contain;
@@ -81,6 +80,9 @@ main:hover {
   margin: 1em 0;
 } */
 
+header {
+  grid-area: header;
+}
 .navbar {
   /* margin-left: auto; */
   height: 100%;
@@ -101,10 +103,9 @@ main:hover {
   height: 100%;
   align-items: center;
   margin-left: 2em;
-
 }
 
-.navbar ul li a{
+.navbar ul li a {
   color: #202020;
   text-decoration: none;
 }
@@ -148,6 +149,7 @@ section.date {
 }
 
 section.impressions {
+  width: 100;
   grid-area: impressions;
   background: #333333;
   display: flex;
@@ -185,11 +187,10 @@ section.next-event {
 .next-event .content {
   color: #d3d2cc;
 }
- .next-event a{
+.next-event a {
   text-decoration: none;
   color: #d3d2cc;
-
- }
+}
 
 .image {
   grid-area: image;
@@ -250,7 +251,6 @@ section.next-event {
   background-size: contain;
 }
 
-
 .wrkshp-1 {
   grid-area: wrkshp-1;
   display: flex;
@@ -282,3 +282,56 @@ section.next-event {
   grid-area: wrkshp-3;
 }
 
+@media only screen and (max-width: 768px) {
+  html {
+    background: #f26574;
+  }
+
+  header {
+    display: none;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2.5fr 1fr 6fr;
+    grid-template-areas:
+      "main         main"
+      "next-event   next-event "
+      "date         impressions"
+      "image        image";
+
+    height: 100vh;
+    font-weight: inherit;
+    font-size: 2vw;
+  }
+
+  .main-content {
+    font-size: 1.2em;
+  }
+  .main-content .main-text {
+    max-width: 100%;
+    font-size: 1.8em;
+  }
+
+  .image {
+    overflow: visible;
+  }
+
+  .main-logo {
+    margin: auto;
+    height: 6em;
+    width: 6em;
+    margin-top: 2em;
+  }
+
+  .image-in-div {
+    height: 12em;
+    width: 12em;
+    margin: 1em auto;
+    border-radius: 1em;
+    transition: 0.3s;
+  }
+  .image-in-div:hover {
+  transform: scale(1.5,1.5);
+}
+}
