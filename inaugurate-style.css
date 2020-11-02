@@ -19,8 +19,8 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 5fr 1fr;
   grid-template-areas: 
-  "empty-left empty-middle-top empty-right"
-  "empty-left form empty-right"
+  "empty-left empty-middle-top timer"
+  "empty-left form timer"
   "empty empty empty";
 }
 
@@ -43,7 +43,6 @@ body {
   z-index: 1;
 }
 
-
 .main-form{
   border-radius: 1em;
   background: white;
@@ -63,7 +62,7 @@ body {
 }
 
 
-.input-form .input-code{
+.input-form #input-code{
   width: 80%;
   font-family: 'Mukta', sans-serif;
   font-size: 1.2em;
@@ -72,7 +71,7 @@ body {
   /* text-align: center; */
 }
 
-.input-form .submit-button{
+.input-form #submit-button{
   margin: 1em auto;
   padding: 10px;
   font-family: 'Mukta', sans-serif;
@@ -84,10 +83,20 @@ body {
   background: #fffadf;
 }
 
-.empty-right{
-  grid-area: empty-right;
+#timer{
+  grid-area: timer;
   background: #fffadf;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
+
+#timer-value{
+  visibility: hidden;
+  font-size: 10em;
+}
+
+
 
 .empty-middle{
   grid-area: empty;

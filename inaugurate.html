@@ -11,30 +11,53 @@
     <link rel="stylesheet" href="inaugurate-style.css" />
   </head>
   <body>
+    <!-- <script>
+      function onClick(){
+    let timeLeft = 10;
+    setInterval(function () {
+        timeLeft--;
+        if (timeLeft < 0)
+            return;
+        else
+        console.log(document.getElementById("timer-value").innerHTML);
+        console.log(timeLeft)
+    },1000)
+}
+    </script> -->
     <div class="grid-container">
+      <div id="timer"><p id="timer-value">10</p></div>
       <div class="empty-left"></div>
       <div class="input-form">
         <div class="main-logo">
           <!-- <img src="strokes_logo.png" alt="Logo "> -->
         </div>
-        <form class="main-form" action="onClick" method="post">
+        <div class="main-form">
           <input
             type="text"
-            class="input-code"
+            id="input-code"
             name="code"
             placeholder="Enter input code"
           />
           <input
             type="button"
-            class="submit-button"
+            id="submit-button"            
             value="Click to inaugurate"
             name="button"
+            onclick="onClick()"
           />
-        </form>
+        </div>
+
+        <!-- <form onsubmit="onClick()">
+          Enter name: <input type="text" />
+          <input type="submit" />
+        </form> -->
       </div>
       <div class="empty-right"></div>
       <div class="empty-middle"></div>
       <div class="middle-top"></div>
     </div>
+
+<script src="./timer.js"></script>
+
   </body>
 </html>

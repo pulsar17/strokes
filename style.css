@@ -185,7 +185,11 @@ section.next-event {
 .next-event .content {
   color: #d3d2cc;
 }
+ .next-event a{
+  text-decoration: none;
+  color: #d3d2cc;
 
+ }
 
 .image {
   grid-area: image;
