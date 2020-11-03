@@ -23,6 +23,16 @@ body {
   "empty-left form timer"
   "empty empty empty";
   font-size: 1vw;
+  background: #fffadf;
+}
+
+#confetti{
+  /* overflow: hidden; */
+  position: absolute;
+  z-index: 1;
+  grid-area: empty-left;
+  height: 100%;
+  width: 100%;
 }
 
 .input-form{
@@ -45,6 +55,7 @@ body {
 }
 
 .main-form{
+  z-index: 2;
   border-radius: 1em;
   background: white;
   box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
@@ -78,11 +89,11 @@ body {
   font-family: 'Mukta', sans-serif;
   font-size: 1em;  
 }
-
+/* 
 .empty-left{
   grid-area: empty-left;
   background: #fffadf;
-}
+} */
 
 #timer{
   grid-area: timer;

@@ -1,9 +1,3 @@
-
-
-// document.getElementById("submit-button").onClick = function () {
-//     console.log(10);
-//     this.disabled = true;
-// }
 var timeLeft = 10;
 function onClick() {
 
@@ -14,10 +8,13 @@ function onClick() {
         timerValue.style.display = "block";
         document.getElementById("submit-button").disabled = true;
         
-        setInterval(function () {
+        var timer = setInterval(function () {
             timeLeft--;
             if (timeLeft < 0) {
                 timerValue.style.visibility = "hidden";
+                initConfetti();
+                render();
+                clearInterval(timer);
                 return;
             }
                 
@@ -26,9 +23,8 @@ function onClick() {
         },1000)
     }
     else {
-        alert("Enter a valid OTP");
-    }
-    
+        alert("Enter a valid Code");
+    }    
 }
 
 function moveUp() {

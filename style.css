@@ -233,7 +233,7 @@ section.next-event {
 .image-in-div:hover {
   z-index: 1;
   box-shadow: 0.5em 1em 2em rgba(0, 0, 0, 0.5);
-  transform: scale(1.01, 1.01);
+  transform: scale(1.2, 1.2);
 }
 
 .artheals {
