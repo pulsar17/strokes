@@ -15,6 +15,11 @@ function onClick() {
                 initConfetti();
                 render();
                 clearInterval(timer);
+
+                window.setTimeout(function(){
+                window.location.href = "./exhibition.html";
+                }, 3000);
+                
                 return;
             }
                 
