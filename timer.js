@@ -26,10 +26,10 @@ function onClick() {
             else
             timerValue.innerHTML = timeLeft;
         },1000)
-    }
-    else {
-        alert("Enter a valid Code");
-    }    
+    // }
+    // else {
+    //     alert("Enter a valid Code");
+    // }    
 }
 
 function moveUp() {
