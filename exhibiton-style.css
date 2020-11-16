@@ -17,13 +17,33 @@ body {
 .grid-container {
   height: 100%;
   display: grid;
-  grid-template-columns: 10px auto 10px;
-  grid-template-rows: 1fr repeat(2, 1fr);
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr repeat(4, 1fr);
   grid-template-areas:
-    "poster poster poster"
-    "empty-left song-row-1 empty-right"
-    "empty-left song-row-2 empty-right";
+    "strokes-logo poster swarang-logo"
+    "song-row-1 song-row-1 song-row-1"
+    "song-row-2 song-row-2 song-row-2"
+    "song-row-3 song-row-3 song-row-3"
+    "song-row-4 song-row-4 song-row-4";
   font-size: 1vw;
+  overflow-x: hidden;
+}
+
+.logo{
+  height: 40%;
+  width: 40%;
+  margin: auto ;
+}
+.main-logo {
+  grid-area: strokes-logo;
+  background: url(./images/strokes_logo.png) no-repeat;
+  background-size: contain;
+}
+
+.swarang-logo {
+  grid-area: swarang-logo;
+  background: url(./images/swarang-logo.jpg) no-repeat;
+  background-size: contain;
 }
 
 .poster {
@@ -67,6 +87,11 @@ body {
   grid-template-areas: "song-4 song-5 song-6";
 }
 
+.song-row-3 {
+  grid-area: song-row-3;
+  grid-template-areas: "song-7 song-8 song-9";
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -91,6 +116,15 @@ body {
 .song-6 {
   grid-area: song-6;
 }
+.song-7 {
+  grid-area: song-7;
+}
+.song-68{
+  grid-area: song-8;
+}
+.song-9 {
+  grid-area: song-9;
+}
 
 video {
   width: 70%;
@@ -103,8 +137,8 @@ video {
   .grid-container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-rows: 3fr repeat(6, 1fr);
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 3fr repeat(9, 1fr);
     grid-template-areas:
       "poster     poster poster"
       "empty-left song-row-1 empty-right"
@@ -113,9 +147,18 @@ video {
       "empty-left song-row-2 empty-right"
       "empty-left song-row-2 empty-right"
       "empty-left song-row-2 empty-right"
+      "empty-left song-row-3 empty-right"
+      "empty-left song-row-3 empty-right"
+      "empty-left song-row-3 empty-right"
       "";
     font-size: 3vw;
     background: #fffadf;
+  }
+
+  .logo{
+    height: 80%;
+    width: 80%;
+    margin: auto ;
   }
 
   .song-row{
@@ -138,6 +181,13 @@ video {
     "song-6";    
   }
 
+  .song-row-3{
+    grid-template-areas: 
+    "song-7"
+    "song-8"
+    "song-9";    
+  }
+
   .song-1 {
     grid-area: song-1;
   }
@@ -155,5 +205,14 @@ video {
   }
   .song-6 {
     grid-area: song-6;
+  }
+  .song-7 {
+    grid-area: song-7;
+  }
+  .song-68{
+    grid-area: song-8;
+  }
+  .song-9 {
+    grid-area: song-9;
   }
 }
