@@ -2,8 +2,8 @@ var timeLeft = 10;
 function onClick() {
 
     code = document.getElementById("input-code").value;
-    if (code == 88588) {
-        timerValue = document.getElementById("timer-value");
+    // if (code == 88588) {
+    //     timerValue = document.getElementById("timer-value");
         timerValue.style.visibility = "visible";
         timerValue.style.display = "block";
         document.getElementById("submit-button").disabled = true;
@@ -26,10 +26,10 @@ function onClick() {
             else
             timerValue.innerHTML = timeLeft;
         },1000)
-    }
-    else {
-        alert("Enter a valid Code");
-    }    
+    // }
+    // else {
+    //     alert("Enter a valid Code");
+    // }    
 }
 
 function moveUp() {
