@@ -45,8 +45,22 @@ body {
   align-items: center;
 }
 
+.logos{
+  display: flex;
+  justify-content: center;
+}
+
 .main-logo {
   background: url(./images/strokes_logo.png) no-repeat;
+  background-size: contain;
+  height: 5em;
+  width: 5em;
+  margin: 2em;
+  z-index: 1;
+}
+
+.swarang-logo {
+  background: url(./images/swarang-logo.jpg) no-repeat;
   background-size: contain;
   height: 5em;
   width: 5em;
